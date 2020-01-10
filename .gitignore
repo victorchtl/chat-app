@@ -1,2 +1,4 @@
 node_modules/
 .package-lock.json
+.karma.conf.js
+.e2e/protractor.conf.js
