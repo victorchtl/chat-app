@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="headertitle">
+        <h1>Live Chat</h1>
+    </div>
+    <div class="chatcontent" *ngFor="let item of messageArray">
+        <div class="usernametext">
+            {{item.user}}
+        </div>
+        <div class="bubble">
+            <div class="bubbletext">
+                {{item.message}}
+            </div>
+        </div>
+    </div>
+    <div class="textsender">
+        <input class="messageinput" [(ngModel)]="message" (keyup)="$event.keyCode == 13 && sendMessage()" />
+        <button class="messagebtn" (click)="sendMessage()">Send</button>
+    </div>
+</div>
+
